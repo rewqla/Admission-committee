@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Help</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-6">
+        <form class="px-4 py-3" id="studentData">
+          <div class="p-1">
+            <h2>Інформація про студента</h2>
+            <div class="p-1">
+              <label for="firstName">Ім’я</label>
+              <input class="form-control" id="firstName" placeholder="Введіть ім’я" value="Юрій">
+              <span for="firstName" class="text-danger"></span>
+            </div>
+            <div class="p-1">
+              <label for="middleName">Ім’я по батькові</label>
+              <input class="form-control" id="middleName" placeholder="Введіть іІм’я по батькові" value="Олегович">
+              <span for="middleName" class="text-danger"></span>
+            </div>
+            <div class="p-1">
+              <label for=lastName">Прізвище</label>
+              <input class="form-control" id="lastName" placeholder="Введіть прізвище" value="Мосійчук">
+              <span for="lastName" class="text-danger"></span>
+            </div>
+            <div class="p-1">
+              <label for="phone">Номер телефон</label>
+              <input class="form-control" id="phone" placeholder="Введіть номер телефо" value="380973296464">
+              <span for="phone" class="text-danger"></span>
+            </div>
+            <div class="p-1">
+              <label for="institute">Інститут</label>
+              <select id="institute" class="form-select" aria-label="Default select example">
+                <option value="ak" selected>АВТОМАТИКИ, КІБЕРНЕТИКИ ТА ОБЧИСЛЮВАЛЬНОЇ ТЕХНІКИ</option>
+                <option value="vg">ВОДНОГО ГОСПОДАРСТВА ТА ПРИРОДООБЛАШТУВАННЯ</option>
+                <option value="ba">БУДІВНИЦТВА ТА АРХІТЕКТУРИ</option>
+                <option value="az">АГРОЕКОЛОГІЇ ТА ЗЕМЛЕУСТРОЮ</option>
+                <option value="m">МЕХАНІЧНИЙ ІНСТИТУТ</option>
+                <option value="p">ІНСТИТУТ ПРАВА</option>
+                <option value="em">ЕКОНОМІКИ ТА МЕНЕДЖМЕНТУ</option>
+                <option value="oz">ОХОРОНИ ЗДОРОВ`Я</option>
+              </select>
+            </div>
+            <div class="p-1">
+              <button class="btn btn-primary">Продовжити</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <form class="px-4 py-3" id="studentEmail">
+          <div class="p-1">
+            <h2>Дані для пошти</h2>
+            <div class="p-1">
+              <label for="email">Пошта</label>
+              <div class="input-group">
+                <input class="form-control" id="email">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="emailAddon" hidden>ak23@nuwm.edu.ua</span>
+                </div>
+              </div>
+              <span for="email" class="text-danger"></span>
+            </div>
+            <div class="p-1">
+              <label for="password">Пароль</label>
+              <input class="form-control" id="password">
+              <span for="password" class="text-danger"></span>
+            </div>
+            <div class="p-1">
+              <button type="button" id="AddStudent" class="btn btn-primary">Додати студента в ексель</button>
+            </div>
+          </div>
+        </form>
+        <div class="p-1 px-4 py-3">
+          <h2>Excel</h2>
+          <div class="p-1" id="choseExcelType">
+            <button type="button" id="ChoseExcel" class="btn btn-primary ">Вибрати вже існуючий Excel</button>
+            <button type="button" id="CreateExcel" class="btn btn-primary m-1">Створити новий Excel</button>
+            <input type="file" id="excelFile" class="d-none" accept=".xls,.xlsx" />
+          </div>
+          <h4 id="ExcelText" class="p-1">Файл не вибрано</h4>
+          <h4 id="ActionInfo" class="p-1"></h4>
+          <button type="button" id="DownloadExcel" class="btn btn-primary m-1 d-none">Завантажити Excel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
+</html>
